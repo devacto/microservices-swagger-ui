@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="x-ua-compatible" content="IE=edge">
-  <title>Swagger UI</title>
+  <title>EOP Swagger UI</title>
   <link rel="icon" type="image/png" href="images/favicon-32x32.png" sizes="32x32" />
   <link rel="icon" type="image/png" href="images/favicon-16x16.png" sizes="16x16" />
   <link href='css/typography.css' media='screen' rel='stylesheet' type='text/css'/>
@@ -41,15 +41,14 @@
     $(function () {
       var selectedUrl = "One";
       var spec = {
-        "e-api": "/e-api/e-api.yml",
-        "e-auth": "/e-auth/e-auth.yml",
-        "e-booking": "/e-booking/e-booking.yml",
-        "e-config": "/e-config/e-config.yml",
-        "e-marketing": "/e-marketing/e-marketing.yml",
-        "e-notification": "/e-notification/e-notification.yml",
-        "e-restaurant": "/e-restaurant/e-restaurant.yml",
-        "e-user": "/e-user/e-user.yml",
-        "common": "/common/common.yml"
+        "e-api": "/e-api.json",
+        "e-auth": "/e-auth.json",
+        "e-booking": "/e-booking.json",
+        "e-config": "/e-config.json",
+        "e-marketing": "/e-marketing.json",
+        "e-notification": "/e-notification.json",
+        "e-restaurant": "/e-restaurant.json",
+        "e-user": "/e-user.json"
       }
       function updateMultipleSpecs() {
         var sel = $('#input_baseUrl');
@@ -75,7 +74,7 @@
       if (url && url.length > 1) {
         url = decodeURIComponent(url[1]);
       } else {
-        url = "http://swagger.staging.eatigo.systems/e-api/e-api.yml";
+        url = "http://swagger.staging.eatigo.systems/e-api.json";
       }
 
       hljs.configure({
