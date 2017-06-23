@@ -41,14 +41,14 @@
     $(function () {
       var selectedUrl = "One";
       var spec = {
-        "e-api": "/e-api.yml",
-        "e-auth": "/e-auth.yml",
-        "e-booking": "/e-booking.yml",
-        "e-config": "/e-config.yml",
-        "e-marketing": "/e-marketing.yml",
-        "e-notification": "/e-notification.yml",
-        "e-restaurant": "/e-restaurant.yml",
-        "e-user": "/e-user.yml"
+        "e-api": "/e-api/e-api.yml",
+        "e-auth": "/e-auth/e-auth.yml",
+        "e-booking": "/e-booking/e-booking.yml",
+        "e-config": "/e-config/e-config.yml",
+        "e-marketing": "/e-marketing/e-marketing.yml",
+        "e-notification": "/e-notification/e-notification.yml",
+        "e-restaurant": "/e-restaurant/e-restaurant.yml",
+        "e-user": "/e-user/e-user.yml"
       }
       function updateMultipleSpecs() {
         var sel = $('#input_baseUrl');
@@ -74,7 +74,7 @@
       if (url && url.length > 1) {
         url = decodeURIComponent(url[1]);
       } else {
-        url = "http://127.0.0.1:8080/e-api.yml";
+        url = "http://swagger.staging.eatigo.systems/e-api.yml";
       }
 
       hljs.configure({
@@ -129,7 +129,7 @@
 <body class="swagger-section">
 <div id='header'>
   <div class="swagger-ui-wrap">
-    <a id="logo" href="http://swagger.io"><img class="logo__img" alt="swagger" height="30" width="30" src="images/logo_small.png" /><span class="logo__title">swagger</span></a>
+    <a id="logo" href="http://swagger.staging.eatigo.systems"><img class="logo__img" alt="swagger" height="30" width="30" src="images/logo_small.png" /><span class="logo__title">swagger</span></a>
     <form id='api_selector'>
       <!-- replace existing input_baseUrl with a select -->
       <div class="input">
